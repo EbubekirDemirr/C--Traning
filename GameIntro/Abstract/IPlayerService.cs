@@ -9,7 +9,8 @@ namespace GameIntro.Abstract
     public interface IPlayerService
     {
         void Add(Player player);
-        void Remove(Player player);
-        void Update(Player player);
+        void Update (Player player);
+        void Delete (Player player);
+
     }
 }

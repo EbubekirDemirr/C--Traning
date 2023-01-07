@@ -5,23 +5,30 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GameIntro.Concrete
+namespace GameIntro
 {
-    public class PlayerManager:IPlayerService
+    public class PlayerManager : Base
     {
-        public void Add(Player player)
+        IPlayerCheckService _playerCheckService;
+        public PlayerManager(IPlayerCheckService playerCheckService)
         {
-            Console.WriteLine(player.FirstName+ " " + player.LastName+ " added!");
+            _playerCheckService = playerCheckService;
         }
+        public override void Add(Player player)
+        {
+            if (_playerCheckService.CheckIfRealPerson(player))
+            {
+                Console.WriteLine(player.FirstName + " " + "Player Added");
+            }
+            else
+            {
+                Console.WriteLine(player.FirstName + " " + "Player not a real Person");
+            }
+        }
+       
 
-        public void Remove(Player player)
-        {
-            Console.WriteLine(player.FirstName + " " + player.LastName + " removed!");
-        }
 
-        public void Update(Player player)
-        {
-            Console.WriteLine(player.FirstName+ " " +player.LastName+ " updated!");
-        }
+
+
     }
 }

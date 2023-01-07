@@ -10,7 +10,6 @@ namespace GameIntro.Entities
     {
         public string CampaigningName { get; set; }
         public string DiscountRate { get; set; }
-        public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        
     }
 }

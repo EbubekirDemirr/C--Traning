@@ -1,4 +1,5 @@
 ﻿using GameIntro.Abstract;
+using GameIntro.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,19 +10,19 @@ namespace GameIntro.Concrete
 {
     public class CampaigningManager : ICampaigningService
     {
-        public void DeleteCampaigning()
+        public void AddCampaigning(Campaigning campaigning)
         {
-            Console.WriteLine( )
+            Console.WriteLine(campaigning.CampaigningName + "added campaigning");
         }
 
-        public void NewCampaigning()
+        public void DeletedCampaigning(Campaigning campaigning)
         {
-            throw new NotImplementedException();
+            Console.WriteLine(campaigning.CampaigningName + "Deleted campaigning");
         }
 
-        public void UpdateCampaigning()
+        public void UpdateCampaigning(Campaigning campaigning)
         {
-            throw new NotImplementedException();
+            Console.WriteLine(campaigning.CampaigningName + "Updated campaigning");
         }
     }
 }

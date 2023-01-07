@@ -1,14 +1,14 @@
-﻿using GameIntro.Abstract;
-using System;
+﻿using System;
 using GameIntro.MernisServiceReference;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using GameIntro.Abstract;
 
 namespace GameIntro.Adapters
 {
-    public class MernisCheckService: IPlayerCheckService
+    public class MernisServiceAdapters:IPlayerCheckService
     {
         public bool CheckIfRealPerson(Player player)
         {

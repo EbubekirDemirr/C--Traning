@@ -9,9 +9,8 @@ namespace GameIntro.Abstract
 {
     public interface ICampaigningService
     {
-        void NewCampaigning(Campaigning campaigning);
-        void UpdateCampaigning(Campaigning campaigning);
-        void DeleteCampaigning(Campaigning campaigning);
-
+        void AddCampaigning(Campaigning campaigning);
+        void DeletedCampaigning (Campaigning campaigning);
+        void UpdateCampaigning (Campaigning campaigning);
     }
 }

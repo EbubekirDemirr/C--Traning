@@ -45,14 +45,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\Base.cs" />
     <Compile Include="Abstract\ICampaigningService.cs" />
+    <Compile Include="Abstract\IGameService.cs" />
     <Compile Include="Abstract\IPlayerCheckService.cs" />
     <Compile Include="Abstract\IPlayerService.cs" />
-    <Compile Include="Adapters\MernisCheckService.cs" />
+    <Compile Include="Abstract\ISaleManager.cs" />
+    <Compile Include="Adapters\MernisServiceAdapters.cs" />
     <Compile Include="Concrete\CampaigningManager.cs" />
     <Compile Include="Concrete\GameManager.cs" />
     <Compile Include="Concrete\PlayerCheckManager.cs" />
-    <Compile Include="Concrete\PlayerManager.cs" />
+    <Compile Include="Concrete\SalesManager.cs" />
     <Compile Include="Connected Services\MernisServiceReference\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -61,6 +64,7 @@
     <Compile Include="Entities\Campaigning.cs" />
     <Compile Include="Entities\Game.cs" />
     <Compile Include="Entities\Player.cs" />
+    <Compile Include="Concrete\PlayerManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
